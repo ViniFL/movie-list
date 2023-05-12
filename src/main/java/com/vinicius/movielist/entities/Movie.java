@@ -16,24 +16,23 @@ public class Movie {
     private Integer year;
     private String genre;
     private Double score;
-    private String imgUrl;
     @Column(columnDefinition = "TEXT")
-    private String resume;
+    private String shortResume;
     @Column(columnDefinition = "TEXT")
-    private String description;
+    private String longDescription;
 
     public Movie() {
     }
 
-    public Movie(Long id, String title, Integer year, String genre, Double score, String imgUrl, String resume, String description) {
+    public Movie(Long id, String title, Integer year, String genre, Double score, String shortResume, String longDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
         this.genre = genre;
         this.score = score;
-        this.imgUrl = imgUrl;
-        this.resume = resume;
-        this.description = description;
+
+        this.shortResume = shortResume;
+        this.longDescription = longDescription;
     }
 
     public Long getId() {
@@ -76,28 +75,20 @@ public class Movie {
         this.score = score;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getShortResume() {
+        return shortResume;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setShortResume(String resume) {
+        this.shortResume = resume;
     }
 
-    public String getResume() {
-        return resume;
+    public String getLongDescription() {
+        return longDescription;
     }
 
-    public void setResume(String resume) {
-        this.resume = resume;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLongDescription(String description) {
+        this.longDescription = description;
     }
 
     @Override
